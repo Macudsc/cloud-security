@@ -1,0 +1,32 @@
+[+] Tool versions
+git version 2.43.0
+Terraform v1.15.5
+on linux_amd64
+Yandex Cloud CLI 1.12.0 linux/amd64
+Client Version: v1.36.1
+Kustomize Version: v5.8.1
+Docker version 29.5.3, build d1c06ef
+jq-1.7
+
+[+] Yandex Cloud profile
+subject-id: aje1cbgvg0i4ubifit6t
+username: monopolistlife@yandex.com
+cloud-id: b1g8hqvfi07su33aj48q
+folder-id: b1gu3nq1mok4pkdh63j0
+compute-default-zone: ru-central1-a
+
+[+] Clouds
++----------------------+----------------------+----------------------+--------+
+|          ID          |         NAME         |   ORGANIZATION ID    | LABELS |
++----------------------+----------------------+----------------------+--------+
+| b1g8hqvfi07su33aj48q | cloud-monopolistlife | bpf416tm25m28gne0p3r |        |
++----------------------+----------------------+----------------------+--------+
+
+
+[+] Folders
++----------------------+---------+--------+--------+
+|          ID          |  NAME   | LABELS | STATUS |
++----------------------+---------+--------+--------+
+| b1gu3nq1mok4pkdh63j0 | default |        | ACTIVE |
++----------------------+---------+--------+--------+
+
