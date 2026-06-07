@@ -1,0 +1,10 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.pem
+*.key
+kubeconfig*
+yc-*.json
+.env
+evidence/**/*.secret

@@ -1,32 +1,26 @@
 Схема стенда
 
 ```jsx
+Локальная VM / DevOps workstation
+        |
+        | yc / terraform / kubectl / docker
+        v
 Yandex Cloud
-│
-├── VPC
-│   ├── Public subnet
-│   │   └── attacker-bastion-vm
-│   │
-│   └── Private subnet
-│       ├── Kubernetes worker node
-│       └── application workloads
-│
-├── Managed Kubernetes
-│   └── 1 worker node
-│
-├── Container Registry
-│   └── Docker images
-│
-├── Object Storage
-│   ├── reports bucket
-│   └── test-data bucket
-│
-├── Lockbox
-│   └── secrets
-│
-├── Audit Trails
-│   └── cloud audit events
-│
-└── Cloud Logging / Monitoring
-    └── logs and basic alerts
+ ├── IAM / Service Accounts
+ ├── VPC
+ │   ├── public subnet
+ │   └── private subnet
+ ├── Managed Kubernetes
+ │   ├── app namespace
+ │   ├── test app
+ │   ├── NetworkPolicy
+ │   └── RBAC
+ ├── Container Registry
+ ├── Object Storage
+ │   ├── public-demo-bucket
+ │   └── protected-bucket
+ ├── Lockbox
+ ├── Audit Trails
+ ├── Cloud Logging
+ └── Monitoring
 ```
