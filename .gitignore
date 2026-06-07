@@ -1,10 +1,23 @@
-.terraform/
+# Terraform
+**/.terraform/
 *.tfstate
 *.tfstate.*
 *.tfvars
-*.pem
+crash.log
+crash.*.log
+.terraform.lock.hcl
+
+# Secrets and credentials
 *.key
-kubeconfig*
-yc-*.json
+*.pem
+*.json.key
+authorized_key.json
+sa-key.json
+kubeconfig
+kubeconfig-*
 .env
-evidence/**/*.secret
+.env.*
+
+# Local files
+.DS_Store
+*.log
