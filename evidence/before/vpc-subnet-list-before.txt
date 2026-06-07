@@ -1,0 +1,11 @@
++----------------------+-------------------------------+----------------------+----------------+---------------+-----------------+
+|          ID          |             NAME              |      NETWORK ID      | ROUTE TABLE ID |     ZONE      |      RANGE      |
++----------------------+-------------------------------+----------------------+----------------+---------------+-----------------+
+| b0c859rd9344hrc62830 | default-ru-central1-c         | enpfv39vgsgqqtvspd0c |                | ru-central1-c | [10.130.0.0/24] |
+| e2lmapali3fmamo3neo8 | default-ru-central1-b         | enpfv39vgsgqqtvspd0c |                | ru-central1-b | [10.129.0.0/24] |
+| e9b7rm7c08m39mb8d7hm | default-ru-central1-a         | enpfv39vgsgqqtvspd0c |                | ru-central1-a | [10.128.0.0/24] |
+| e9bekf9j50eht6q3tjni | subnet-public-cloud-security  | enpc539qffbmeekhja36 |                | ru-central1-a | [10.10.10.0/24] |
+| e9bs5ip9ogk8b8kit0lt | subnet-private-cloud-security | enpc539qffbmeekhja36 |                | ru-central1-a | [10.10.20.0/24] |
+| fl8nn3df7700f0mrgqm8 | default-ru-central1-d         | enpfv39vgsgqqtvspd0c |                | ru-central1-d | [10.131.0.0/24] |
++----------------------+-------------------------------+----------------------+----------------+---------------+-----------------+
+

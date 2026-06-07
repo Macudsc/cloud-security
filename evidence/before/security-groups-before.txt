@@ -1,0 +1,11 @@
++----------------------+------------------------------------+--------------------------------+----------------------+
+|          ID          |                NAME                |          DESCRIPTION           |      NETWORK-ID      |
++----------------------+------------------------------------+--------------------------------+----------------------+
+| enp65d1b014qs1l016vi | default-sg-enpfv39vgsgqqtvspd0c    | Default security group for     | enpfv39vgsgqqtvspd0c |
+|                      |                                    | network                        |                      |
+| enp6he46moo99ackgrhs | default-sg-enpc539qffbmeekhja36    | Default security group for     | enpc539qffbmeekhja36 |
+|                      |                                    | network                        |                      |
+| enp9iu7r32n54ksvjbnj | sg-after-restricted-cloud-security |                                | enpc539qffbmeekhja36 |
+| enpt6o9gck85abqe3cf7 | sg-before-broad-cloud-security     |                                | enpc539qffbmeekhja36 |
++----------------------+------------------------------------+--------------------------------+----------------------+
+
