@@ -1,0 +1,13 @@
+HTTP/2 200 
+server: nginx
+date: Mon, 08 Jun 2026 11:30:00 GMT
+content-type: text/plain
+content-length: 156
+accept-ranges: bytes
+etag: "38ed6b6f4d57d3aa0ae49d3ba852ee66"
+last-modified: Mon, 08 Jun 2026 11:23:00 GMT
+x-amz-request-id: 1f7ed99e46959d83
+
+Demo report for cloud security experiment.
+This file does not contain real personal, confidential or production data.
+Created at: 2026-06-08T11:21:27+00:00

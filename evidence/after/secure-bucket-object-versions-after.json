@@ -1,0 +1,32 @@
+{
+    "Versions": [
+        {
+            "ETag": "\"ca952e1f1e24d2f55c9b2460da7f95ce\"",
+            "Size": 54,
+            "StorageClass": "STANDARD",
+            "Key": "dr-test.txt",
+            "VersionId": "000653BC4C6C03CF",
+            "IsLatest": true,
+            "LastModified": "2026-06-08T11:27:41.368000+00:00",
+            "Owner": {
+                "DisplayName": "ajeoak35383h0spg9ulo",
+                "ID": "ajeoak35383h0spg9ulo"
+            }
+        },
+        {
+            "ETag": "\"4f900d3d4c5e916525620e723fdfe7a7\"",
+            "Size": 54,
+            "StorageClass": "STANDARD",
+            "Key": "dr-test.txt",
+            "VersionId": "000653BC4C0976BE",
+            "IsLatest": false,
+            "LastModified": "2026-06-08T11:27:34.909000+00:00",
+            "Owner": {
+                "DisplayName": "ajeoak35383h0spg9ulo",
+                "ID": "ajeoak35383h0spg9ulo"
+            }
+        }
+    ],
+    "RequestCharged": null,
+    "Prefix": "dr-test.txt"
+}
