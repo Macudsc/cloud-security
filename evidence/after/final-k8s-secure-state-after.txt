@@ -1,0 +1,24 @@
+NAME                              READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES                                           SELECTOR
+deployment.apps/demo-app-secure   1/1     1            1           156m   demo-app     cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure   app=demo-app-secure
+
+NAME                                   READY   STATUS      RESTARTS   AGE    IP              NODE                        NOMINATED NODE   READINESS GATES
+pod/allowed-client                     0/1     Completed   0          149m   10.112.128.14   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+pod/demo-app-secure-67748c9ff7-m8hxn   1/1     Running     0          19m    10.112.128.15   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+pod/denied-client                      0/1     Completed   0          149m   10.112.128.13   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+
+NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE    SELECTOR
+service/demo-app-secure   ClusterIP   10.96.180.107   <none>        80/TCP    170m   app=demo-app-secure
+
+NAME                                                               POD-SELECTOR          AGE
+networkpolicy.networking.k8s.io/allow-allowed-client-to-demo-app   app=demo-app-secure   170m
+networkpolicy.networking.k8s.io/default-deny-ingress               <none>                170m
+
+NAME                      SECRETS   AGE
+serviceaccount/default    0         170m
+serviceaccount/demo-app   0         170m
+
+NAME                                               CREATED AT
+role.rbac.authorization.k8s.io/demo-app-readonly   2026-06-08T15:21:50Z
+
+NAME                                                              ROLE                     AGE    USERS   GROUPS   SERVICEACCOUNTS
+rolebinding.rbac.authorization.k8s.io/demo-app-readonly-binding   Role/demo-app-readonly   170m                    secure/demo-app

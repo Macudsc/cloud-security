@@ -1,0 +1,13 @@
+NAME                                  READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS   IMAGES                                               SELECTOR
+deployment.apps/demo-app-vulnerable   1/1     1            1           3h2m   demo-app     cr.yandex/crpgvkre5ragc5bos7qt/demo-app:vulnerable   app=demo-app-vulnerable
+
+NAME                                       READY   STATUS      RESTARTS   AGE    IP              NODE                        NOMINATED NODE   READINESS GATES
+pod/demo-app-vulnerable-65b6764bcf-cz888   1/1     Running     0          3h2m   10.112.128.4    cl1mbmqga34k81l88f63-ejok   <none>           <none>
+pod/test-client-before                     0/1     Completed   0          172m   10.112.128.9    cl1mbmqga34k81l88f63-ejok   <none>           <none>
+pod/test-client-before-dns                 0/1     Completed   0          153m   10.112.128.12   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+
+NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE    SELECTOR
+service/demo-app-vulnerable   ClusterIP   10.96.169.175   <none>        80/TCP    3h3m   app=demo-app-vulnerable
+
+NAME                     TYPE     DATA   AGE
+secret/demo-app-secret   Opaque   2      3h3m

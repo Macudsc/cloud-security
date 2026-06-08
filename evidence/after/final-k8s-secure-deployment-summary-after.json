@@ -1,0 +1,61 @@
+{
+  "serviceAccountName": "demo-app",
+  "automountServiceAccountToken": false,
+  "securityContext": {
+    "runAsGroup": 10001,
+    "runAsNonRoot": true,
+    "runAsUser": 10001,
+    "seccompProfile": {
+      "type": "RuntimeDefault"
+    }
+  },
+  "containers": [
+    {
+      "name": "demo-app",
+      "image": "cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure",
+      "securityContext": {
+        "allowPrivilegeEscalation": false,
+        "capabilities": {
+          "drop": [
+            "ALL"
+          ]
+        },
+        "readOnlyRootFilesystem": true
+      },
+      "resources": {
+        "limits": {
+          "cpu": "250m",
+          "memory": "256Mi"
+        },
+        "requests": {
+          "cpu": "50m",
+          "memory": "64Mi"
+        }
+      },
+      "readinessProbe": {
+        "failureThreshold": 3,
+        "httpGet": {
+          "path": "/",
+          "port": 8080,
+          "scheme": "HTTP"
+        },
+        "initialDelaySeconds": 3,
+        "periodSeconds": 10,
+        "successThreshold": 1,
+        "timeoutSeconds": 2
+      },
+      "livenessProbe": {
+        "failureThreshold": 3,
+        "httpGet": {
+          "path": "/",
+          "port": 8080,
+          "scheme": "HTTP"
+        },
+        "initialDelaySeconds": 10,
+        "periodSeconds": 20,
+        "successThreshold": 1,
+        "timeoutSeconds": 2
+      }
+    }
+  ]
+}
