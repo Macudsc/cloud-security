@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app-vulnerable
+  namespace: vulnerable
+  labels:
+    app: demo-app-vulnerable
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app-vulnerable
+  template:
+    metadata:
+      labels:
+        app: demo-app-vulnerable
+    spec:
+      containers:
+        - name: demo-app
+          image: cr.yandex/crpgvkre5ragc5bos7qt/demo-app:vulnerable
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: demo-app-secret
+                  key: DB_PASSWORD
+          securityContext:
+            privileged: true
+            runAsUser: 0

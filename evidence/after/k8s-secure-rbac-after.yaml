@@ -1,0 +1,43 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"Role","metadata":{"annotations":{},"name":"demo-app-readonly","namespace":"secure"},"rules":[{"apiGroups":[""],"resources":["configmaps"],"verbs":["get","list"]}]}
+    creationTimestamp: "2026-06-08T15:21:50Z"
+    name: demo-app-readonly
+    namespace: secure
+    resourceVersion: "28637"
+    uid: ed928b18-155f-4e5c-a142-2a82a15bed1b
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - configmaps
+    verbs:
+    - get
+    - list
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"name":"demo-app-readonly-binding","namespace":"secure"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"demo-app-readonly"},"subjects":[{"kind":"ServiceAccount","name":"demo-app","namespace":"secure"}]}
+    creationTimestamp: "2026-06-08T15:21:50Z"
+    name: demo-app-readonly-binding
+    namespace: secure
+    resourceVersion: "28638"
+    uid: 79cfbeff-8780-4797-ad4e-c6f6efea826d
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: demo-app-readonly
+  subjects:
+  - kind: ServiceAccount
+    name: demo-app
+    namespace: secure
+kind: List
+metadata:
+  resourceVersion: ""

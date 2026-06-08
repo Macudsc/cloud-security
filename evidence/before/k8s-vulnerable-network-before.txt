@@ -1,0 +1,19 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 10.96.169.175:80...
+* Connected to 10.96.169.175 (10.96.169.175) port 80
+> GET / HTTP/1.1
+> Host: 10.96.169.175
+> User-Agent: curl/8.8.0
+> Accept: */*
+> 
+* Request completely sent off
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Server: BaseHTTP/0.6 Python/3.8.17
+< Date: Mon, 08 Jun 2026 15:19:15 GMT
+< 
+{ [20 bytes data]
+100    20    0    20    0     0  16488      0 --:--:-- --:--:-- --:--:-- 20000
+* Closing connection
+vulnerable demo app

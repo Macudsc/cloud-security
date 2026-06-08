@@ -1,0 +1,127 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 03753737e76f381f6cfa350f243155dbb6c335dae7a725440f7697e55b4c3635
+    cni.projectcalico.org/podIP: ""
+    cni.projectcalico.org/podIPs: ""
+  creationTimestamp: "2026-06-08T15:38:32Z"
+  generation: 1
+  labels:
+    run: test-client-before-dns
+  name: test-client-before-dns
+  namespace: vulnerable
+  resourceVersion: "33525"
+  uid: a12c3805-3a22-4a42-af8f-4d7b2b76638d
+spec:
+  containers:
+  - command:
+    - sh
+    - -c
+    - curl -v --connect-timeout 5 http://demo-app-vulnerable.vulnerable.svc.cluster.local
+      || true
+    image: curlimages/curl:8.8.0
+    imagePullPolicy: IfNotPresent
+    name: test-client-before-dns
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kmh96
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: cl1mbmqga34k81l88f63-ejok
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-kmh96
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-08T15:38:39Z"
+    status: "False"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-08T15:38:32Z"
+    reason: PodCompleted
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-08T15:38:38Z"
+    reason: PodCompleted
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-08T15:38:38Z"
+    reason: PodCompleted
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-06-08T15:38:32Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://b61f94dc41b099993d26d2c0a80248b41d367fd91025fda7794fbe0eed217bb6
+    image: docker.io/curlimages/curl:8.8.0
+    imageID: docker.io/curlimages/curl@sha256:73e4d532ea62d7505c5865b517d3704966ffe916609bedc22af6833dc9969bcd
+    lastState: {}
+    name: test-client-before-dns
+    ready: false
+    resources: {}
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: containerd://b61f94dc41b099993d26d2c0a80248b41d367fd91025fda7794fbe0eed217bb6
+        exitCode: 0
+        finishedAt: "2026-06-08T15:38:38Z"
+        reason: Completed
+        startedAt: "2026-06-08T15:38:33Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-kmh96
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.10.20.4
+  hostIPs:
+  - ip: 10.10.20.4
+  phase: Succeeded
+  podIP: 10.112.128.12
+  podIPs:
+  - ip: 10.112.128.12
+  qosClass: BestEffort
+  startTime: "2026-06-08T15:38:32Z"

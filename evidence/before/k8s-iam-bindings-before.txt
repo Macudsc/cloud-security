@@ -1,0 +1,11 @@
++----------------------------------+----------------+----------------------+
+|             ROLE ID              |  SUBJECT TYPE  |      SUBJECT ID      |
++----------------------------------+----------------+----------------------+
+| storage.admin                    | serviceAccount | ajeoak35383h0spg9ulo |
+| container-registry.images.puller | serviceAccount | ajettqv74ls6a0qibs5f |
+| k8s.clusters.agent               | serviceAccount | aje2mv4tmt7p44dtqrvv |
+| vpc.publicAdmin                  | serviceAccount | aje2mv4tmt7p44dtqrvv |
+| editor                           | serviceAccount | ajeq9u4nparch3g75iv7 |
+| iam.serviceAccounts.user         | serviceAccount | ajeq9u4nparch3g75iv7 |
++----------------------------------+----------------+----------------------+
+

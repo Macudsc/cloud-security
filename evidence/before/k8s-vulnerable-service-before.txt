@@ -1,0 +1,5 @@
+NAME                          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/demo-app-vulnerable   ClusterIP   10.96.169.175   <none>        80/TCP    29m   app=demo-app-vulnerable
+
+NAME                            ENDPOINTS           AGE
+endpoints/demo-app-vulnerable   10.112.128.4:8080   29m

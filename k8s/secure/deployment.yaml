@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app-secure
+  namespace: secure
+  labels:
+    app: demo-app-secure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app-secure
+  template:
+    metadata:
+      labels:
+        app: demo-app-secure
+    spec:
+      serviceAccountName: demo-app
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: demo-app
+          image: cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PYTHONDONTWRITEBYTECODE
+              value: "1"
+            - name: SECRET_SOURCE
+              value: "lockbox-reference-no-plaintext-secret"
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"

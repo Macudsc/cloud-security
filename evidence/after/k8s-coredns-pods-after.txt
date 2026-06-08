@@ -1,0 +1,3 @@
+NAME                       READY   STATUS    RESTARTS   AGE    IP             NODE                        NOMINATED NODE   READINESS GATES
+coredns-768847b69f-8zm46   1/1     Running   0          52m    10.112.128.3   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+coredns-768847b69f-b9k49   1/1     Running   0          121m   10.112.129.7   cl1mbmqga34k81l88f63-isut   <none>           <none>
