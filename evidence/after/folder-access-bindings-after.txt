@@ -1,0 +1,8 @@
++--------------------------+----------------+----------------------+
+|         ROLE ID          |  SUBJECT TYPE  |      SUBJECT ID      |
++--------------------------+----------------+----------------------+
+| storage.admin            | serviceAccount | ajeoak35383h0spg9ulo |
+| editor                   | serviceAccount | ajeq9u4nparch3g75iv7 |
+| iam.serviceAccounts.user | serviceAccount | ajeq9u4nparch3g75iv7 |
++--------------------------+----------------+----------------------+
+
