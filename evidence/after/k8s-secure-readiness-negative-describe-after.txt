@@ -1,0 +1,106 @@
+Name:             demo-app-secure-67748c9ff7-m8hxn
+Namespace:        secure
+Priority:         0
+Service Account:  demo-app
+Node:             cl1mbmqga34k81l88f63-ejok/10.10.20.4
+Start Time:       Mon, 08 Jun 2026 17:52:20 +0000
+Labels:           app=demo-app-secure
+                  pod-template-hash=67748c9ff7
+Annotations:      cni.projectcalico.org/containerID: 734c8c21ef29f01ac99a30e4deb7687206d4ff697edfbaff9e1fbbee4a56426e
+                  cni.projectcalico.org/podIP: 10.112.128.15/32
+                  cni.projectcalico.org/podIPs: 10.112.128.15/32
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.112.128.15
+IPs:
+  IP:           10.112.128.15
+Controlled By:  ReplicaSet/demo-app-secure-67748c9ff7
+Containers:
+  demo-app:
+    Container ID:   containerd://3fe782810c0608dce76498bed46b484e4d48296987fa6a076b90dc8ef98a43d9
+    Image:          cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure
+    Image ID:       cr.yandex/crpgvkre5ragc5bos7qt/demo-app@sha256:3d4114ba94e9ea22e26b86816103b784fdfe33abcc0b2cda73ed973eb7b0f849
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Mon, 08 Jun 2026 17:52:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     250m
+      memory:  256Mi
+    Requests:
+      cpu:      50m
+      memory:   64Mi
+    Liveness:   http-get http://:8080/ delay=10s timeout=2s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:8080/ delay=3s timeout=2s period=10s #success=1 #failure=3
+    Environment:
+      PYTHONDONTWRITEBYTECODE:  1
+      SECRET_SOURCE:            lockbox-reference-no-plaintext-secret
+    Mounts:                     <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             demo-app-secure-6bbf8fd8d9-5h4j4
+Namespace:        secure
+Priority:         0
+Service Account:  demo-app
+Node:             cl1mbmqga34k81l88f63-ejok/10.10.20.4
+Start Time:       Mon, 08 Jun 2026 17:56:23 +0000
+Labels:           app=demo-app-secure
+                  pod-template-hash=6bbf8fd8d9
+Annotations:      cni.projectcalico.org/containerID: fdc80f39204f01d9dc045c6f9364c112132b30f26384e21a5ad8ab2d1887db41
+                  cni.projectcalico.org/podIP: 10.112.128.16/32
+                  cni.projectcalico.org/podIPs: 10.112.128.16/32
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.112.128.16
+IPs:
+  IP:           10.112.128.16
+Controlled By:  ReplicaSet/demo-app-secure-6bbf8fd8d9
+Containers:
+  demo-app:
+    Container ID:   containerd://94f0a5bcb5d6ada522a50c73e2b8fc76b9d5aa4342877d08033b1449ba215e9d
+    Image:          cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure
+    Image ID:       cr.yandex/crpgvkre5ragc5bos7qt/demo-app@sha256:3d4114ba94e9ea22e26b86816103b784fdfe33abcc0b2cda73ed973eb7b0f849
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Mon, 08 Jun 2026 17:56:24 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     250m
+      memory:  256Mi
+    Requests:
+      cpu:      50m
+      memory:   64Mi
+    Liveness:   http-get http://:8080/ delay=10s timeout=2s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:9999/ delay=3s timeout=2s period=10s #success=1 #failure=3
+    Environment:
+      PYTHONDONTWRITEBYTECODE:  1
+      SECRET_SOURCE:            lockbox-reference-no-plaintext-secret
+    Mounts:                     <none>
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:                      <none>
+QoS Class:                    Burstable
+Node-Selectors:               <none>
+Tolerations:                  node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                              node.kubernetes.io/unreachable:NoExecute op=Exists for 300s

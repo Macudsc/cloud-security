@@ -1,0 +1,4 @@
+NAME                               READY   STATUS      RESTARTS   AGE    IP              NODE                        NOMINATED NODE   READINESS GATES
+allowed-client                     0/1     Completed   0          146m   10.112.128.14   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+demo-app-secure-67748c9ff7-m8hxn   1/1     Running     0          16m    10.112.128.15   cl1mbmqga34k81l88f63-ejok   <none>           <none>
+denied-client                      0/1     Completed   0          146m   10.112.128.13   cl1mbmqga34k81l88f63-ejok   <none>           <none>

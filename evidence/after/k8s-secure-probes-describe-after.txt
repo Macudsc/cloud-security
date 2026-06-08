@@ -1,0 +1,7 @@
+    Liveness:   http-get http://:8080/ delay=10s timeout=2s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:8080/ delay=3s timeout=2s period=10s #success=1 #failure=3
+    Environment:
+      PYTHONDONTWRITEBYTECODE:  1
+      SECRET_SOURCE:            lockbox-reference-no-plaintext-secret
+    Mounts:                     <none>
+Conditions:

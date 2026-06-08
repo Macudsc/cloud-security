@@ -1,0 +1,57 @@
+apiVersion: v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.112.128.15
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: cl1mbmqga34k81l88f63-ejok
+    targetRef:
+      kind: Pod
+      name: demo-app-secure-67748c9ff7-m8hxn
+      namespace: secure
+      uid: 73178e8e-ef93-4d35-b718-18e202a39a53
+    zone: ru-central1-a
+  - addresses:
+    - 10.112.128.16
+    conditions:
+      ready: false
+      serving: false
+      terminating: true
+    nodeName: cl1mbmqga34k81l88f63-ejok
+    targetRef:
+      kind: Pod
+      name: demo-app-secure-6bbf8fd8d9-5h4j4
+      namespace: secure
+      uid: eef4ec18-091a-4267-9743-50b3bb3cae76
+    zone: ru-central1-a
+  kind: EndpointSlice
+  metadata:
+    creationTimestamp: "2026-06-08T15:21:50Z"
+    generateName: demo-app-secure-
+    generation: 11
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: demo-app-secure
+    name: demo-app-secure-rg5zd
+    namespace: secure
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: demo-app-secure
+      uid: 01abae18-6c57-43e4-8acb-fc73a169cff1
+    resourceVersion: "75577"
+    uid: 8f222c94-0590-457c-b9c3-ec79d2eb8607
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+kind: List
+metadata:
+  resourceVersion: ""

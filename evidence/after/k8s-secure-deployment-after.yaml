@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"demo-app-secure"},"name":"demo-app-secure","namespace":"secure"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"demo-app-secure"}},"template":{"metadata":{"labels":{"app":"demo-app-secure"}},"spec":{"automountServiceAccountToken":false,"containers":[{"env":[{"name":"PYTHONDONTWRITEBYTECODE","value":"1"},{"name":"SECRET_SOURCE","value":"lockbox-reference-no-plaintext-secret"}],"image":"cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure","imagePullPolicy":"Always","name":"demo-app","ports":[{"containerPort":8080}],"resources":{"limits":{"cpu":"250m","memory":"256Mi"},"requests":{"cpu":"50m","memory":"64Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true}}],"securityContext":{"runAsGroup":10001,"runAsNonRoot":true,"runAsUser":10001,"seccompProfile":{"type":"RuntimeDefault"}},"serviceAccountName":"demo-app"}}}}
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"demo-app-secure"},"name":"demo-app-secure","namespace":"secure"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"demo-app-secure"}},"template":{"metadata":{"labels":{"app":"demo-app-secure"}},"spec":{"automountServiceAccountToken":false,"containers":[{"env":[{"name":"PYTHONDONTWRITEBYTECODE","value":"1"},{"name":"SECRET_SOURCE","value":"lockbox-reference-no-plaintext-secret"}],"image":"cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure","imagePullPolicy":"Always","livenessProbe":{"failureThreshold":3,"httpGet":{"path":"/","port":8080},"initialDelaySeconds":10,"periodSeconds":20,"timeoutSeconds":2},"name":"demo-app","ports":[{"containerPort":8080}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/","port":8080},"initialDelaySeconds":3,"periodSeconds":10,"timeoutSeconds":2},"resources":{"limits":{"cpu":"250m","memory":"256Mi"},"requests":{"cpu":"50m","memory":"64Mi"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true}}],"securityContext":{"runAsGroup":10001,"runAsNonRoot":true,"runAsUser":10001,"seccompProfile":{"type":"RuntimeDefault"}},"serviceAccountName":"demo-app"}}}}
   creationTimestamp: "2026-06-08T15:35:16Z"
-  generation: 1
+  generation: 2
   labels:
     app: demo-app-secure
   name: demo-app-secure
   namespace: secure
-  resourceVersion: "32553"
+  resourceVersion: "71937"
   uid: 04cf1522-355d-4e57-93bd-e2b0ae83eea7
 spec:
   progressDeadlineSeconds: 600
@@ -40,10 +40,30 @@ spec:
           value: lockbox-reference-no-plaintext-secret
         image: cr.yandex/crpgvkre5ragc5bos7qt/demo-app:secure
         imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 20
+          successThreshold: 1
+          timeoutSeconds: 2
         name: demo-app
         ports:
         - containerPort: 8080
           protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 3
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
         resources:
           limits:
             cpu: 250m
@@ -81,12 +101,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2026-06-08T15:35:16Z"
-    lastUpdateTime: "2026-06-08T15:35:18Z"
-    message: ReplicaSet "demo-app-secure-d7d6f69d" has successfully progressed.
+    lastUpdateTime: "2026-06-08T17:52:23Z"
+    message: ReplicaSet "demo-app-secure-67748c9ff7" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  observedGeneration: 1
+  observedGeneration: 2
   readyReplicas: 1
   replicas: 1
   updatedReplicas: 1
