@@ -1,0 +1,18 @@
+id: cnpgvslh6uc5sd79u1or
+folder_id: b1gu3nq1mok4pkdh63j0
+created_at: "2026-06-08T15:52:31.615Z"
+updated_at: "2026-06-08T15:52:31.615Z"
+name: cloud-security-trail
+description: Audit trail for cloud security experiment
+destination:
+  cloud_logging:
+    log_group_id: e23cn00gc8pu5p6bc5q3
+service_account_id: ajeo2omjca0jph33du2d
+status: ACTIVE
+cloud_id: b1g8hqvfi07su33aj48q
+filtering_policy:
+  management_events_filter:
+    resource_scopes:
+      - id: b1gu3nq1mok4pkdh63j0
+        type: resource-manager.folder
+

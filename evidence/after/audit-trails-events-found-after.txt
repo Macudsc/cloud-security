@@ -1,0 +1,22 @@
+    "message": "STARTED yandex.cloud.audit.audittrails.CreateTrail; subject: monopolistlife; trail: cloud-security-trail; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+        "description": "Audit trail for cloud security experiment",
+        "trail_name": "cloud-security-trail"
+        "name": "cloud-security-trail",
+            "resource_name": "cloud-security-trail",
+    "message": "DONE yandex.cloud.audit.audittrails.CreateTrail; subject: monopolistlife; trail: cloud-security-trail; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+        "description": "Audit trail for cloud security experiment",
+        "trail_name": "cloud-security-trail"
+        "name": "cloud-security-trail",
+            "resource_name": "cloud-security-trail",
+    "message": "STARTED yandex.cloud.audit.iam.CreateServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+      "event_type": "yandex.cloud.audit.iam.CreateServiceAccount",
+            "resource_type": "iam.serviceAccount"
+    "message": "DONE yandex.cloud.audit.iam.CreateServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+      "event_type": "yandex.cloud.audit.iam.CreateServiceAccount",
+            "resource_type": "iam.serviceAccount"
+    "message": "STARTED yandex.cloud.audit.iam.DeleteServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+      "event_type": "yandex.cloud.audit.iam.DeleteServiceAccount",
+            "resource_type": "iam.serviceAccount"
+    "message": "DONE yandex.cloud.audit.iam.DeleteServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+      "event_type": "yandex.cloud.audit.iam.DeleteServiceAccount",
+            "resource_type": "iam.serviceAccount"

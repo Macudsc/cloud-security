@@ -1,0 +1,535 @@
+[
+  {
+    "uid": "055dcc02:18b725fe40273cd7:e92da440",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:52:31.576554711Z",
+    "ingested_at": "2026-06-08T15:52:31.576554711Z",
+    "saved_at": "2026-06-08T15:52:31.576554711Z",
+    "level": "INFO",
+    "message": "STARTED yandex.cloud.audit.audittrails.CreateTrail; subject: monopolistlife; trail: cloud-security-trail; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "description": "Audit trail for cloud security experiment",
+        "destination": {
+          "cloud_logging": {
+            "log_group_id": "e23cn00gc8pu5p6bc5q3"
+          }
+        },
+        "filtering_policy": {
+          "data_events_filters": [],
+          "management_events_filter": {
+            "resource_scopes": [
+              {
+                "id": "b1gu3nq1mok4pkdh63j0",
+                "type": "resource-manager.folder"
+              }
+            ]
+          }
+        },
+        "labels": {},
+        "service_account_id": "ajeo2omjca0jph33du2d",
+        "status": "ACTIVE",
+        "trail_id": "cnpgvslh6uc5sd79u1or",
+        "trail_name": "cloud-security-trail"
+      },
+      "event_id": "cnpar74okkoqae43ko05",
+      "event_source": "audittrails",
+      "event_status": "STARTED",
+      "event_time": "2026-06-08T15:52:31.576554711Z",
+      "event_type": "yandex.cloud.audit.audittrails.CreateTrail",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "remote_port": "4428",
+        "request_id": "cf4d4d19-6d85-4ce3-8430-f3ccd0721f5c",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "destination": {
+          "cloud_logging": {
+            "log_group_id": "e23cn00gc8pu5p6bc5q3"
+          }
+        },
+        "filtering_policy": {
+          "management_events_filter": {
+            "resource_scopes": [
+              {
+                "id": "b1gu3nq1mok4pkdh63j0",
+                "type": "resource-manager.folder"
+              }
+            ]
+          }
+        },
+        "folder_id": "b1gu3nq1mok4pkdh63j0",
+        "name": "cloud-security-trail",
+        "service_account_id": "ajeo2omjca0jph33du2d"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "cnpgvslh6uc5sd79u1or",
+            "resource_name": "cloud-security-trail",
+            "resource_type": "audit-trails.trail"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "cnpnjmlf7mes3tihiqcv"
+      }
+    }
+  },
+  {
+    "uid": "055dcc02:18b725fe40273cd7:f93a15e7",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:52:31.576554711Z",
+    "ingested_at": "2026-06-08T15:52:31.576554711Z",
+    "saved_at": "2026-06-08T15:52:31.576554711Z",
+    "level": "INFO",
+    "message": "DONE yandex.cloud.audit.audittrails.CreateTrail; subject: monopolistlife; trail: cloud-security-trail; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "description": "Audit trail for cloud security experiment",
+        "destination": {
+          "cloud_logging": {
+            "log_group_id": "e23cn00gc8pu5p6bc5q3"
+          }
+        },
+        "filtering_policy": {
+          "data_events_filters": [],
+          "management_events_filter": {
+            "resource_scopes": [
+              {
+                "id": "b1gu3nq1mok4pkdh63j0",
+                "type": "resource-manager.folder"
+              }
+            ]
+          }
+        },
+        "labels": {},
+        "service_account_id": "ajeo2omjca0jph33du2d",
+        "status": "ACTIVE",
+        "trail_id": "cnpgvslh6uc5sd79u1or",
+        "trail_name": "cloud-security-trail"
+      },
+      "event_id": "cnp3n2kjrbsuihqcvot8",
+      "event_source": "audittrails",
+      "event_status": "DONE",
+      "event_time": "2026-06-08T15:52:31.576554711Z",
+      "event_type": "yandex.cloud.audit.audittrails.CreateTrail",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "remote_port": "4428",
+        "request_id": "cf4d4d19-6d85-4ce3-8430-f3ccd0721f5c",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "destination": {
+          "cloud_logging": {
+            "log_group_id": "e23cn00gc8pu5p6bc5q3"
+          }
+        },
+        "filtering_policy": {
+          "management_events_filter": {
+            "resource_scopes": [
+              {
+                "id": "b1gu3nq1mok4pkdh63j0",
+                "type": "resource-manager.folder"
+              }
+            ]
+          }
+        },
+        "folder_id": "b1gu3nq1mok4pkdh63j0",
+        "name": "cloud-security-trail",
+        "service_account_id": "ajeo2omjca0jph33du2d"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "cnpgvslh6uc5sd79u1or",
+            "resource_name": "cloud-security-trail",
+            "resource_type": "audit-trails.trail"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "cnpnjmlf7mes3tihiqcv"
+      }
+    }
+  },
+  {
+    "uid": "055dcc02:18b726100b587800:32ead89f",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:53:48Z",
+    "ingested_at": "2026-06-08T15:53:48Z",
+    "saved_at": "2026-06-08T15:53:48Z",
+    "level": "INFO",
+    "message": "STARTED yandex.cloud.audit.iam.CreateServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "description": "Temporary SA to generate audit event",
+        "labels": {},
+        "service_account_id": "ajekjvuig0lugqga2jco",
+        "service_account_name": "sa-audit-test",
+        "status": "ACTIVE"
+      },
+      "event_id": "ajert0n35m1kb36dd455",
+      "event_source": "iam",
+      "event_status": "STARTED",
+      "event_time": "2026-06-08T15:53:48Z",
+      "event_type": "yandex.cloud.audit.iam.CreateServiceAccount",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "request_id": "f61738a2-c94d-4d27-a838-aab7a6c4bb2e",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "description": "Temporary SA to generate audit event",
+        "folder_id": "b1gu3nq1mok4pkdh63j0",
+        "name": "sa-audit-test"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "ajekjvuig0lugqga2jco",
+            "resource_name": "sa-audit-test",
+            "resource_type": "iam.serviceAccount"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "ajeakdgpj1dtqcdng4ft"
+      }
+    }
+  },
+  {
+    "uid": "055dcc02:18b7261046f34200:94eec14e",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:53:49Z",
+    "ingested_at": "2026-06-08T15:53:49Z",
+    "saved_at": "2026-06-08T15:53:49Z",
+    "level": "INFO",
+    "message": "DONE yandex.cloud.audit.iam.CreateServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "description": "Temporary SA to generate audit event",
+        "labels": {},
+        "service_account_id": "ajekjvuig0lugqga2jco",
+        "service_account_name": "sa-audit-test",
+        "status": "ACTIVE"
+      },
+      "event_id": "ajeqqd5gbsvjs5a4n2mm",
+      "event_source": "iam",
+      "event_status": "DONE",
+      "event_time": "2026-06-08T15:53:49Z",
+      "event_type": "yandex.cloud.audit.iam.CreateServiceAccount",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "request_id": "f61738a2-c94d-4d27-a838-aab7a6c4bb2e",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "description": "Temporary SA to generate audit event",
+        "folder_id": "b1gu3nq1mok4pkdh63j0",
+        "name": "sa-audit-test"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "ajekjvuig0lugqga2jco",
+            "resource_name": "sa-audit-test",
+            "resource_type": "iam.serviceAccount"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "ajeakdgpj1dtqcdng4ft"
+      }
+    }
+  },
+  {
+    "uid": "055dcc02:18b72615a1db6800:d67b6deb",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:54:12Z",
+    "ingested_at": "2026-06-08T15:54:12Z",
+    "saved_at": "2026-06-08T15:54:12Z",
+    "level": "INFO",
+    "message": "STARTED yandex.cloud.audit.iam.DeleteServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "service_account_id": "ajekjvuig0lugqga2jco",
+        "service_account_name": "sa-audit-test",
+        "status": "DELETING"
+      },
+      "event_id": "ajesdc7o0qpol4lkalv0",
+      "event_source": "iam",
+      "event_status": "STARTED",
+      "event_time": "2026-06-08T15:54:12Z",
+      "event_type": "yandex.cloud.audit.iam.DeleteServiceAccount",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "request_id": "6f790322-2448-4d74-83d2-7eea1a383a5c",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "service_account_id": "ajekjvuig0lugqga2jco"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "ajekjvuig0lugqga2jco",
+            "resource_name": "sa-audit-test",
+            "resource_type": "iam.serviceAccount"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "ajetq7120fn4kfdu924l"
+      }
+    }
+  },
+  {
+    "uid": "055dcc02:18b726177eb1b800:9cfd50e2",
+    "resource": {
+      "type": "audit-trails.trail",
+      "id": "cnpgvslh6uc5sd79u1or"
+    },
+    "timestamp": "2026-06-08T15:54:20Z",
+    "ingested_at": "2026-06-08T15:54:20Z",
+    "saved_at": "2026-06-08T15:54:20Z",
+    "level": "INFO",
+    "message": "DONE yandex.cloud.audit.iam.DeleteServiceAccount; subject: monopolistlife; serviceAccount: sa-audit-test; folder: default; cloud: cloud-monopolistlife; organization: organization-monopolistlife;",
+    "json_payload": {
+      "authentication": {
+        "authenticated": true,
+        "subject_id": "aje1cbgvg0i4ubifit6t",
+        "subject_name": "monopolistlife",
+        "subject_type": "YANDEX_PASSPORT_USER_ACCOUNT",
+        "token_info": {
+          "iam_token_id": "ajee5pand3b6a0htnr1p",
+          "impersonator_id": "yc.iam.openid-server",
+          "impersonator_name": "yc-iam-openid-server",
+          "impersonator_type": "SERVICE_ACCOUNT",
+          "masked_iam_token": "t1.9euelZqam5WWks-UzseWy5Sdl5aNne3rnpWazpydmImYz5bLip2WmZaLyYvl8_dXNmUu-e8VZhpE_t3z9xdlYi757xVmGkT-1eL17Iac0ZCeiouX0Y-KnZOWnNKMm5Tt-ZCPmpGWm83n9euelZqayo-ekZvMncmez5eLkY3Oj-_8xeuelZqayo-ekZvMncmez5eLkY3Oj73rnpWazcyMmZaUk5WazpaXkZfNxo6164ac0ZaektGQj5qRlpvSjJqNiZqN.**** (7B71B999)"
+        }
+      },
+      "authorization": {
+        "authorized": true
+      },
+      "details": {
+        "service_account_id": "ajekjvuig0lugqga2jco",
+        "service_account_name": "sa-audit-test",
+        "status": "DELETING"
+      },
+      "event_id": "aje728l0d7qm03jpsb9u",
+      "event_source": "iam",
+      "event_status": "DONE",
+      "event_time": "2026-06-08T15:54:20Z",
+      "event_type": "yandex.cloud.audit.iam.DeleteServiceAccount",
+      "request_metadata": {
+        "remote_address": "91.188.171.232",
+        "request_id": "6f790322-2448-4d74-83d2-7eea1a383a5c",
+        "user_agent": "YC/1.12.0 grpc-go/1.80.0"
+      },
+      "request_parameters": {
+        "service_account_id": "ajekjvuig0lugqga2jco"
+      },
+      "resource_metadata": {
+        "path": [
+          {
+            "resource_id": "bpf416tm25m28gne0p3r",
+            "resource_name": "organization-monopolistlife",
+            "resource_type": "organization-manager.organization"
+          },
+          {
+            "resource_id": "b1g8hqvfi07su33aj48q",
+            "resource_name": "cloud-monopolistlife",
+            "resource_type": "resource-manager.cloud"
+          },
+          {
+            "resource_id": "b1gu3nq1mok4pkdh63j0",
+            "resource_name": "default",
+            "resource_type": "resource-manager.folder"
+          },
+          {
+            "resource_id": "ajekjvuig0lugqga2jco",
+            "resource_name": "sa-audit-test",
+            "resource_type": "iam.serviceAccount"
+          }
+        ]
+      },
+      "response": {
+        "operation_id": "ajetq7120fn4kfdu924l"
+      }
+    }
+  }
+]
+

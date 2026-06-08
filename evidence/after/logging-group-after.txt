@@ -1,0 +1,8 @@
+id: e23cn00gc8pu5p6bc5q3
+folder_id: b1gu3nq1mok4pkdh63j0
+cloud_id: b1g8hqvfi07su33aj48q
+created_at: "2026-06-08T15:49:06.262Z"
+name: cloud-security-audit-logs
+status: ACTIVE
+retention_period: 259200s
+
