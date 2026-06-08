@@ -1,0 +1,71 @@
+id: catod9s931vif6mqmd60
+folder_id: b1gu3nq1mok4pkdh63j0
+created_at: "2026-06-08T13:35:09Z"
+name: k8s-cloud-security
+labels:
+  env: experiment
+  project: cloud-security
+status: RUNNING
+health: HEALTHY
+network_id: enpc539qffbmeekhja36
+master:
+  zonal_master:
+    zone_id: ru-central1-a
+    internal_v4_address: 10.10.20.7
+    external_v4_address: 111.88.248.192
+  locations:
+    - zone_id: ru-central1-a
+      subnet_id: e9bs5ip9ogk8b8kit0lt
+  etcd_cluster_size: "1"
+  version: "1.33"
+  endpoints:
+    internal_v4_endpoint: https://10.10.20.7
+    external_v4_endpoint: https://111.88.248.192
+  master_auth:
+    cluster_ca_certificate: |
+      -----BEGIN CERTIFICATE-----
+      MIIC5zCCAc+gAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl
+      cm5ldGVzMB4XDTI2MDYwODEzMzUxMloXDTM2MDYwNTEzMzUxMlowFTETMBEGA1UE
+      AxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO6T
+      7JnRn5ZYvkUXdwSxFQygH++ObTGocLLl7R5sNtdtso5OobcRgcxiZCpUZ+j7tRdy
+      PtCBU9SXs75M99REU1b6utCmVFjeapgVUow8KdZycIft+YbK7d10EyEOzfTVI8Vo
+      J+bkBqbOaCykhdNswlC3zr76vpj5KLHgIwRePHtcFyQHbhB5fxQvPjw3+CSF5sku
+      J2PVghP6MqOym9P6FcM793txv/odX5I1DHLXixNH+goeaSkZqwkbdx3XlxjoCmIl
+      S6wrmy7PCnN2eftur4ZL6ea3/c3HUbS8nHgrzCkj+S70Me+Gk3hNxF74XJOX/Nxs
+      vdQ659ucgHCRXf06l+UCAwEAAaNCMEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB
+      /wQFMAMBAf8wHQYDVR0OBBYEFG1L+nt5ncR1G4+1dLcruxmWLaToMA0GCSqGSIb3
+      DQEBCwUAA4IBAQAVrQ18sc7WqnaBJdgDtf/9Xxq4YlyCkSoLLZvEPQAjoTCp577G
+      SLTpMUdX++llU+fEKzRGw+OP6hCLFUzos8RB0Tb/42TEm1HGx4b1hqatVi+JzHYH
+      OzXKd/PBRFosMCXvEPY1oSh/WvbnMIJvJPIHyY/gqhYlXwwvs2AHOL6IPT7J1uG8
+      h8pughAbtBs04zTdw+GSBgLVQwt/n9ufaFUgucX0tLkfTeY5hdzQenOtlwmOSv8j
+      5dI+IxhvOKFXzSpX5nfqFlT9Teu3MUQVRdFxiAJv9tDV/PG4yEV7aZ40qMB0vQ2+
+      0hIbObrFl24wlRs78ZVJ9Gdj8KTBG1g6zwnp
+      -----END CERTIFICATE-----
+  version_info:
+    current_version: "1.33"
+  maintenance_policy:
+    auto_upgrade: true
+    maintenance_window:
+      daily_maintenance_window:
+        start_time:
+          hours: 22
+        duration: 36000s
+  security_group_ids:
+    - enp9nfctbojai3nct40h
+  resources:
+    cores: "2"
+    core_fraction: "100"
+    memory: "8589934592"
+  scale_policy:
+    auto_scale:
+      min_resource_preset_id: s-c2-m8
+ip_allocation_policy:
+  cluster_ipv4_cidr_block: 10.112.0.0/16
+  node_ipv4_cidr_mask_size: "24"
+  service_ipv4_cidr_block: 10.96.0.0/16
+service_account_id: aje2mv4tmt7p44dtqrvv
+node_service_account_id: ajettqv74ls6a0qibs5f
+release_channel: STABLE
+network_policy:
+  provider: CALICO
+

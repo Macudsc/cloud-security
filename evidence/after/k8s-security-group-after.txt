@@ -1,0 +1,40 @@
+id: enp9nfctbojai3nct40h
+folder_id: b1gu3nq1mok4pkdh63j0
+created_at: "2026-06-08T13:33:41Z"
+name: sg-k8s-cloud-security
+description: Security group for Kubernetes experiment
+network_id: enpc539qffbmeekhja36
+status: ACTIVE
+rules:
+  - id: enp52a7h52u5ep04o0je
+    description: k8s-api-public-demo
+    direction: INGRESS
+    ports:
+      from_port: "443"
+      to_port: "443"
+    protocol_name: TCP
+    protocol_number: "6"
+    cidr_blocks:
+      v4_cidr_blocks:
+        - 0.0.0.0/0
+  - id: enpco9rcfj90c2co65el
+    description: internal-cluster-traffic
+    direction: INGRESS
+    ports:
+      to_port: "65535"
+    protocol_name: ANY
+    protocol_number: "-1"
+    cidr_blocks:
+      v4_cidr_blocks:
+        - 10.10.0.0/16
+  - id: enpa4uurjhv5qdf7kifa
+    description: all-egress
+    direction: EGRESS
+    ports:
+      to_port: "65535"
+    protocol_name: ANY
+    protocol_number: "-1"
+    cidr_blocks:
+      v4_cidr_blocks:
+        - 0.0.0.0/0
+
