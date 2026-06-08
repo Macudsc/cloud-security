@@ -1,0 +1,4 @@
+{
+  "severity": "MEDIUM",
+  "count": 1
+}

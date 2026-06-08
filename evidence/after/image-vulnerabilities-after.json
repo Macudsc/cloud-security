@@ -1,0 +1,16 @@
+[
+  {
+    "package": {
+      "name": "CVE-2026-34743",
+      "link": "https://avd.aquasec.com/nvd/cve-2026-34743",
+      "package": "xz-libs",
+      "source": "trivy",
+      "version": "5.8.2-r0",
+      "fixed_by": "5.8.3-r0",
+      "origin": "os",
+      "type": "alpine"
+    },
+    "severity": "MEDIUM"
+  }
+]
+

@@ -1,0 +1,20 @@
+{
+  "severity": "CRITICAL",
+  "count": 2
+}
+{
+  "severity": "HIGH",
+  "count": 40
+}
+{
+  "severity": "LOW",
+  "count": 29
+}
+{
+  "severity": "MEDIUM",
+  "count": 51
+}
+{
+  "severity": "UNDEFINED",
+  "count": 3
+}

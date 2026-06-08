@@ -1,0 +1,14 @@
+{
+  "id": "cheub6cdco8f30gskj82",
+  "image_id": "crpqc6f4ebqen7fl14b0",
+  "scanned_at": "2026-06-08T13:10:32.305Z",
+  "status": "READY",
+  "vulnerabilities": {
+    "critical": "2",
+    "high": "40",
+    "medium": "51",
+    "low": "29",
+    "undefined": "3"
+  }
+}
+
