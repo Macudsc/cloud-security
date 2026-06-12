@@ -11,6 +11,7 @@ Yandex Cloud
  │   ├── public subnet
  │   └── private subnet
  ├── Managed Kubernetes
+ │   ├── node group (2 wrokers)
  │   ├── app namespace
  │   ├── test app
  │   ├── NetworkPolicy
